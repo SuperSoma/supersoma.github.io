@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="jquery-scrollto.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><!------>
 		
 		<script>
@@ -21,16 +22,19 @@
 				$("#move1").find("h3").html(move1);
 				$("#move2").find("h3").html(move2);
 				$("#move3").find("h3").html(move3);
+				$("#scrollHere").ScrollTo();
 			}
 			
 			function genChars() {
 				$("#char1").find("h4").html(characters[Math.floor(characters.length * Math.random())]);
 				$("#char2").find("h4").html(characters[Math.floor(characters.length * Math.random())]);
+				$("#scrollHere").ScrollTo();
 			}
 			
 			function newGame() {
 				genMoves();
 				genChars();
+				$("#scrollHere").ScrollTo();
 			}
 		</script>
 	</head>
@@ -42,7 +46,7 @@
 					<h1 style="color:crimson;    text-shadow: 3px 3px #000;">Taboo Melee</h1>
 				</div>
 			</div>
-			<div class="row">
+			<div id="scrollHere" class="row">
 				<div class="col-md-6">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
