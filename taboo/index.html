@@ -4,15 +4,42 @@
 		<title>Taboo Melee</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-		<!---<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>--->
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><!------>
+		
+		<script>
+			var characters = [
+				"Mario", "Link", "Yoshi", "Game & Watch", "Fox", "Sheik", "Samus", "Pikachu", "Dr. Mario", "Falco", "Luigi", "Ganondorf", "Captain Falcon", "Marth", "Peach", "Jigglypuff", "Donkey Kong", 
+				"Ice Climbers", "Ness", "Bowser", "Zelda", "Roy", "Pichu", "Kirby", "Mewtwo", "Young Link"
+			];
+			function genMoves() {
+				var moveList = ["Jab", "Foward Tilt", "Down Tilt", "Up Tilt", "Neutral Air", "Down Air", "Forward Air", "Back Air", "Up Air", "Forward Smash", "Down Smash", "That Up Smash", "Up B", "Neutral B","Side B", "Grab"];
+				var move1 = moveList.splice(Math.floor(Math.random() * moveList.length), 1);
+				var move2 = moveList.splice(Math.floor(Math.random() * moveList.length), 1);
+				var move3 = moveList.splice(Math.floor(Math.random() * moveList.length), 1);
+				
+				$("#move1").find("h3").html(move1);
+				$("#move2").find("h3").html(move2);
+				$("#move3").find("h3").html(move3);
+			}
+			
+			function genChars() {
+				$("#char1").find("h4").html(moveList[Math.floor(characters.length * Math.random())]);
+				$("#char2").find("h4").html(moveList[Math.floor(characters.length * Math.random())]);
+			}
+			
+			function newGame() {
+				genMoves();
+				genChars();
+			}
+		</script>
 	</head>
 	
 	<body>
 		<div class="container">
 			<div class="row">
 				<div style="padding-top:20px;text-align:center;padding-bottom:10px;">
-					<h1>Taboo Melee</h1>
+					<h1 style="color:red;">Taboo Melee (beta)</h1>
 				</div>
 			</div>
 			<div class="row">
@@ -66,7 +93,7 @@
 						
 						<div class="panel-body">
 							<div id="newGame" class="row" style="padding-bottom:15px">
-								<div class="col-md-8 col-md-offset-2">
+								<div class="col-md-8 col-md-offset-2" onclick="newGame()">
 									<div class="btn btn-danger btn-block">
 										<h4>Generate New Game</h4>
 									</div>
@@ -91,6 +118,11 @@
 				</div>
 			</div>
 		</div>
+		<footer class="footer">
+			<div class="container">
+				&copy; 2016 Nicholas Zonak
+			</div>
+		</footer>
 	</body>
 
 
