@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-		<script src="jquery-scrollto.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script><!------>
 		
 		<script>
@@ -22,20 +21,21 @@
 				$("#move1").find("h3").html(move1);
 				$("#move2").find("h3").html(move2);
 				$("#move3").find("h3").html(move3);
-				$("#scrollHere").ScrollTo();
 			}
 			
 			function genChars() {
 				$("#char1").find("h4").html(characters[Math.floor(characters.length * Math.random())]);
 				$("#char2").find("h4").html(characters[Math.floor(characters.length * Math.random())]);
-				$("#scrollHere").ScrollTo();
 			}
 			
 			function newGame() {
 				genMoves();
 				genChars();
-				$("#scrollHere").ScrollTo();
 			}
+			
+			$(function(){
+				newGame();
+			});
 		</script>
 	</head>
 	
@@ -54,9 +54,9 @@
 						</div>
 						<div class="panel-body">
 							<ol id="moveset" style="list-style:none;padding-left:0;">
-								<li id="move1" class="alert alert-success"><h3 style="margin:0;">Nair</h3></li>
-								<li id="move2" class="alert alert-success"><h3 style="margin:0;">Up-B</h3></li>
-								<li id="move3" class="alert alert-success"><h3 style="margin:0;">Grab</h3></li>
+								<li id="move1" class="alert alert-success"><h3 style="margin:0;"></h3></li>
+								<li id="move2" class="alert alert-success"><h3 style="margin:0;"></h3></li>
+								<li id="move3" class="alert alert-success"><h3 style="margin:0;"></h3></li>
 							</ol>
 						</div>
 					</div>
@@ -69,7 +69,7 @@
 									Player 1 Character
 								</div>
 								<div class="panel-body">
-									<div id="char1" class="alert alert-success"><h4 style="margin:0;">Fox</h4></div>
+									<div id="char1" class="alert alert-success"><h4 style="margin:0;"></h4></div>
 								</div>
 							</div>
 						</div>
@@ -81,7 +81,7 @@
 									Player 2 Character
 								</div>
 								<div class="panel-body">
-									<div id="char2" class="alert alert-success"><h4 style="margin:0;">Falco</h4></div>
+									<div id="char2" class="alert alert-success"><h4 style="margin:0;"></h4></div>
 								</div>
 							</div>
 						</div>
