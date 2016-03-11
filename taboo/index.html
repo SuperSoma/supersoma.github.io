@@ -16,7 +16,7 @@
 				"Ice Climbers", "Ness", "Bowser", "Zelda", "Roy", "Pichu", "Kirby", "Mewtwo", "Young Link"
 			];
 			function genMoves() {
-				var moveList = ["Jab", "Foward Tilt", "Down Tilt", "Up Tilt", "Neutral Air", "Down Air", "Forward Air", "Back Air", "Up Air", "Forward Smash", "Down Smash", "That Up Smash", "Up B", "Neutral B","Side B", "Grab"];
+				var moveList = ["Jab", "Foward Tilt", "Down Tilt", "Up Tilt", "Neutral Air", "Down Air", "Forward Air", "Back Air", "Up Air", "Forward Smash", "Down Smash", "That Up Smash", "Up B", "Neutral B","Side B", "Grab", "Dash Attack"];
 				var move1 = moveList.splice(Math.floor(Math.random() * moveList.length), 1);
 				var move2 = moveList.splice(Math.floor(Math.random() * moveList.length), 1);
 				var move3 = moveList.splice(Math.floor(Math.random() * moveList.length), 1);
@@ -130,7 +130,14 @@
 						</div>
 						
 						<div class="panel-body">
-							Coming soon!
+							<ul>
+								<li>First to 3 wins</li>
+								<li>3 Random Moves are banned and 2 random characters selected</li>
+								<li>First move banned remains banned through whole set</li>
+								<li>Second and Third moves are banned once a person wins their 1st and 2nd games of a set (if you have 0 wins, only the first move is banned, if you have 1 win, then both the first and second move are banned)</li>
+								<li>If you use a banned move, take a sip of whiskey (or drink of choice)</li>
+								<li>If you kill with a banned move, take a shot of whiskey</li>
+							</ul>
 						</div>
 					</div>
 				</div>
