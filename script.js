@@ -1,5 +1,15 @@
 const content = [
   {
+    title: "Key Item Club",
+    description: "Keyitem.club is a collectible tracking community where users submit information about rare items. Our goal is to gather data for enthusiasts and allow users to post standing offers to buy or sell.",
+    links: [
+      {
+        title: "Website",
+        link: "https://www.keyitem.club/"
+      }
+    ]
+  },
+  {
     title: "Heartseeker",
     description: "Embody the Heartseeker blade in this fast-paced precision clicking platformer. Get to the heart of the Living Dungeon and slay the final heart to save existence.",
     links: [{
