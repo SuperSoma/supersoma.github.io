@@ -1,5 +1,15 @@
 const content = [
   {
+    title: "Block Hook",
+    description: "The exciting platformer where you move around with a hook shot! Grapple, release, and even launch yourself around! Dodge deadly red blocks and avoid ghastly purple blocks as you navigate the perilous maze to find your way to the goal!",
+    links: [
+      {
+        title: "ItchIO Page",
+        link: "https://zonak.itch.io/block-hook"
+      }
+    ]
+  },
+  {
     title: "Key Item Club",
     description: "Keyitem.club is a collectible tracking community where users submit information about rare items. Our goal is to gather data for enthusiasts and allow users to post standing offers to buy or sell.",
     links: [
